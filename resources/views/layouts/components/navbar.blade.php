@@ -12,7 +12,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{url('/visi-misi')}}">Visi Misi</a></li>
-                        <li><a class="dropdown-item" href="#">Struktur Organisasi</a></li>
+                        <li><a class="dropdown-item" href="{{url('/struktur-organisasi')}}">Struktur Organisasi</a></li>
                         <li><a class="dropdown-item" href="#">Team</a></li>
                     </ul>
                 </li>

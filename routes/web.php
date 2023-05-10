@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/visi-misi' , function () {
     return view('main.pages.visionAndMission');
 });
+
+route::get('/struktur-organisasi' , function () {
+    return view('main.pages.organizationalStructure');
+});

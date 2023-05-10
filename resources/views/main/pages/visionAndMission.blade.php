@@ -11,13 +11,13 @@
             <div class="col-lg-6 col-12 align-self-center">
                 <h1 class="vision-header">Visi</h1>
                 <p class="vision-caption">
-                    &emsp; Visi dari Universitas Balikpapan adalah Menjadi "Terwujudnya Universitas Balikpapan Sebagai Lembaga
+                    &emsp; &ensp; Visi dari Universitas Balikpapan adalah Menjadi "Terwujudnya Universitas Balikpapan Sebagai Lembaga
                     Pendidikan Tinggi Yang Menghasilkan Sumber Daya Manusia Unggul, Mandiri, dan Berbudaya Dalam Memajukan Ipteks,
                     Melalui Tata Kelola Yang Baik (Good University Governance) Pada Tahun 2025"
                 </p>
             </div>
             <div class="col-lg-6 col-12 d-none d-lg-block">
-                <div class="vision-wrap">
+                <div class="vision-wrap" data-aos="zoom-in" data-aos-interval="3000">
                     <div class="vision-img" style="background: url('https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2')"></div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
 
         <div class="row mt-5">
             <div class="col-lg-6 col-12 d-none d-lg-block">
-                <div class="vision-wrap">
+                <div class="vision-wrap" data-aos="zoom-in" data-aos-interval="3000">
                     <div class="vision-img" style="background: url('https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2')"></div>
                 </div>
             </div>
