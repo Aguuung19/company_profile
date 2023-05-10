@@ -11,7 +11,7 @@
             </div>
             <div class="col-lg-6 col-md-6 col-12 mt-5 mt-lg-0" >
                 <div class="hero-wrap" data-aos="zoom-in" data-aos-interval="3000">
-                    <div class="hero-img" style="background: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1')">
+                    <div class="hero-img" fetchpriority="high" style="background: url('https://file-examples.com/storage/fe563fce08645a90397f28d/2020/03/file_example_WEBP_50kB.webp')">
 
                     </div>
                 </div>
@@ -48,7 +48,7 @@
 
 <section class="news">
     <div class="container">
-        <h2 class="news-header">Berita Terbaru</h2>
+        <h1 class="news-header">Berita Terbaru</h1>
     </div>
     <div class="container">
         <div class="row justify-content-center">
@@ -65,13 +65,13 @@
                             <div class="row">
                                 <div class="col-lg-4 col-12">
                                     <div class="news-wrap">
-                                        <div class="news-img" style="background: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b')">
+                                        <div class="news-img" style="background: url('https://file-examples.com/storage/fe563fce08645a90397f28d/2020/03/file_example_WEBP_50kB.webp')">
 
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-8 col-12 align-self-center mt-3 mt-lg-0">
-                                        <h5 class="news-subheader">Judul Berita 1</h5>
+                                        <h2 class="news-subheader">Judul Berita 1</h2>
                                         <p class="news-caption">some excerpt here</p>
                                 </div>
                             </div>
@@ -81,13 +81,13 @@
                             <div class="row">
                                 <div class="col-lg-4 col-12">
                                     <div class="news-wrap">
-                                        <div class="news-img" style="background: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b')">
+                                        <div class="news-img" style="background: url('https://file-examples.com/storage/fe563fce08645a90397f28d/2020/03/file_example_WEBP_50kB.webp')">
 
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-8 col-12 align-self-center mt-3 mt-lg-0">
-                                        <h5 class="news-subheader">Judul Berita 2</h5>
+                                        <h2 class="news-subheader">Judul Berita 2</h2>
                                         <p class="news-caption">some excerpt here</p>
                                 </div>
                             </div>
@@ -97,13 +97,13 @@
                             <div class="row">
                                 <div class="col-lg-4 col-12">
                                     <div class="news-wrap">
-                                        <div class="news-img" style="background: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b')">
+                                        <div class="news-img" style="background: url('https://file-examples.com/storage/fe563fce08645a90397f28d/2020/03/file_example_WEBP_50kB.webp')">
 
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-8 col-12 align-self-center mt-3 mt-lg-0">
-                                        <h5 class="news-subheader">Judul Berita 3</h5>
+                                        <h2 class="news-subheader">Judul Berita 3</h2>
                                         <p class="news-caption">some excerpt here</p>
                                 </div>
                             </div>

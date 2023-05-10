@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-12">
                         <div class="footer-wrap">
-                            <div class="footer-img" style="background: url('https://e7.pngegg.com/pngimages/874/126/png-clipart-globe-logo-globe-miscellaneous-blue.png')">
+                            <div class="footer-img" style="background: url('https://file-examples.com/storage/fe563fce08645a90397f28d/2020/03/file_example_WEBP_50kB.webp')">
 
                             </div>
                         </div>
@@ -14,7 +14,7 @@
                     <div class="col-lg-4 col-12 mt-3 mt-lg-0">
                         <div class="row pb-3">
                             <div class="col-12">
-                                <h5 class="footer-subheader">Akses Cepat</h5>
+                                <h1 class="footer-subheader">Akses Cepat</h1>
                             </div>
                         </div>
                         <div class="row">
@@ -42,7 +42,7 @@
                     <div class="col-lg-4 col-12 mt-3 mt-lg-0">
                         <div class="row pb-3">
                             <div class="col-12">
-                                <h5 class="footer-subheader">Kontak</h5>
+                                <h1 class="footer-subheader">Kontak</h1>
                             </div>
                         </div>
                         <div class="row">
@@ -63,7 +63,7 @@
 
         <div class="row mt-3">
             <div class="col-12">
-                <h5 class="footer-copyright">@2023 BPSTI UNIVERSITAS BALIKPAPAN</h5>
+                <h1 class="footer-copyright">@2023 BPSTI UNIVERSITAS BALIKPAPAN</h1>
             </div>
         </div>
     </div>
