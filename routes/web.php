@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('main.landingpage');
 });
+
+Route::get('/visi-misi' , function () {
+    return view('main.pages.visionAndMission');
+});
