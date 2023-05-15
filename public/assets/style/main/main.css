@@ -147,6 +147,10 @@ a {
 .news .carousel-indicators {
   bottom: -80px !important;
 }
+.news .carousel-control-next-icon,
+.news .carousel-control-prev-icon {
+  background-image: none !important;
+}
 .news .carousel-control-next,
 .news .carousel-control-prev {
   position: absolute;
@@ -161,9 +165,20 @@ a {
   color: #005bc5 !important;
   text-align: center;
   background: 0 0;
-  border: 1px solid #005bc5;
   opacity: 1;
   transition: opacity 0.15s ease;
+}
+.news .carousel-control-next-icon:after {
+  content: ">";
+  font-size: 30px;
+  font-weight: 600;
+  color: #005bc5;
+}
+.news .carousel-control-prev-icon:after {
+  content: "<";
+  font-size: 30px;
+  font-weight: 600;
+  color: #005bc5;
 }
 
 .faq {

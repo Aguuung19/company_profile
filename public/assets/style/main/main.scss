@@ -208,6 +208,10 @@ a {
     .carousel-indicators {
         bottom: -80px !important;
     }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        background-image: none !important;
+    }
     .carousel-control-next,
     .carousel-control-prev {
         position: absolute;
@@ -222,9 +226,22 @@ a {
         color: $primary !important;
         text-align: center;
         background: 0 0;
-        border: 1px solid $primary;
         opacity: 1;
         transition: opacity 0.15s ease;
+    }
+
+    .carousel-control-next-icon:after {
+        content: ">";
+        font-size: 30px;
+        font-weight: map-get($font-weights, semibold);
+        color: $primary;
+    }
+
+    .carousel-control-prev-icon:after {
+        content: "<";
+        font-size: 30px;
+        font-weight: map-get($font-weights, semibold);
+        color: $primary;
     }
 }
 

@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-12">
                         <div class="footer-wrap">
-                            <div class="footer-img" style="background: url('https://file-examples.com/storage/fe563fce08645a90397f28d/2020/03/file_example_WEBP_50kB.webp')">
+                            <div class="footer-img" style="background: url('{{asset('images/image1.webp')}}')">
 
                             </div>
                         </div>

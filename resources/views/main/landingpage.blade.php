@@ -11,7 +11,7 @@
             </div>
             <div class="col-lg-6 col-md-6 col-12 mt-5 mt-lg-0" >
                 <div class="hero-wrap" data-aos="zoom-in" data-aos-interval="3000">
-                    <div class="hero-img" fetchpriority="high" style="background: url('https://file-examples.com/storage/fe563fce08645a90397f28d/2020/03/file_example_WEBP_50kB.webp')">
+                    <div class="hero-img" fetchpriority="high" style="background: url('{{asset('images/image1.webp')}}')">
 
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                             <div class="row">
                                 <div class="col-lg-4 col-12">
                                     <div class="news-wrap">
-                                        <div class="news-img" style="background: url('https://file-examples.com/storage/fe563fce08645a90397f28d/2020/03/file_example_WEBP_50kB.webp')">
+                                        <div class="news-img" style="background: url('{{asset('images/image1.webp')}}')">
 
                                         </div>
                                     </div>
@@ -81,7 +81,7 @@
                             <div class="row">
                                 <div class="col-lg-4 col-12">
                                     <div class="news-wrap">
-                                        <div class="news-img" style="background: url('https://file-examples.com/storage/fe563fce08645a90397f28d/2020/03/file_example_WEBP_50kB.webp')">
+                                        <div class="news-img" style="background: url('{{asset('images/image1.webp')}}')">
 
                                         </div>
                                     </div>
@@ -97,7 +97,7 @@
                             <div class="row">
                                 <div class="col-lg-4 col-12">
                                     <div class="news-wrap">
-                                        <div class="news-img" style="background: url('https://file-examples.com/storage/fe563fce08645a90397f28d/2020/03/file_example_WEBP_50kB.webp')">
+                                        <div class="news-img" style="background: url('{{asset('images/image1.webp')}}')">
 
                                         </div>
                                     </div>
