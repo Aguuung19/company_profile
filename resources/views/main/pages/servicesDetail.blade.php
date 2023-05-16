@@ -21,7 +21,7 @@
                     </div>
                     <div class="col-lg-9 col-12 mt-5 mt-lg-0">
 
-                            <div id="item-1">
+                            <div class="service-desc" id="item-1">
                                 <h1 class="service-header">Service 1</h1>
                                 <p class="service-caption">
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
@@ -31,7 +31,7 @@
                                     Nobis quae delectus eos architecto aliquid harum consequatur excepturi autem repellat eaque. Neque!
                                 </p>
                             </div>
-                            <div id="item-2">
+                            <div class="service-desc" id="item-2">
                                 <h1 class="service-header">Service 2</h1>
                                 <p class="service-caption">
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -41,7 +41,7 @@
                                     quisquam iusto porro dolor dolorem repellendus! Enim, est!
                                 </p>
                             </div>
-                            <div id="item-3">
+                            <div class="service-desc" id="item-3">
                                 <h1 class="service-header">Service 3</h1>
                                 <p class="service-caption">
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -51,7 +51,7 @@
                                     quisquam iusto porro dolor dolorem repellendus! Enim, est!
                                 </p>
                             </div>
-                            <div id="item-4">
+                            <div class="service-desc" id="item-4">
                                 <h1 class="service-header">Service 4</h1>
                                 <p class="service-caption">
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
