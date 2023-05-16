@@ -21,12 +21,12 @@
                         SOP & Layanan
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Jaringan</a></li>
-                        <li><a class="dropdown-item" href="#">Website / Sistem Informasi</a></li>
-                        <li><a class="dropdown-item" href="#">Bantuan Media / Kegiatan Acara</a></li>
-                        <li><a class="dropdown-item" href="#">Pengajuan Akun / Reset Password</a></li>
-                        <li><a class="dropdown-item" href="#">Permohonan Permintaan Data</a></li>
-                        <li><a class="dropdown-item" href="#">Permohonan Pelatihan / Pendampingan</a></li>
+                        <li><a class="dropdown-item" href="{{url('/service')}}">Jaringan</a></li>
+                        <li><a class="dropdown-item" href="{{url('/service')}}">Website / Sistem Informasi</a></li>
+                        <li><a class="dropdown-item" href="{{url('/service')}}">Bantuan Media / Kegiatan Acara</a></li>
+                        <li><a class="dropdown-item" href="{{url('/service')}}">Pengajuan Akun / Reset Password</a></li>
+                        <li><a class="dropdown-item" href="{{url('/service')}}">Permohonan Permintaan Data</a></li>
+                        <li><a class="dropdown-item" href="{{url('/service')}}">Permohonan Pelatihan / Pendampingan</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

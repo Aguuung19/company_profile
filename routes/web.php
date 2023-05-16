@@ -28,3 +28,7 @@ route::get('/struktur-organisasi' , function () {
 route::get('team' , function () {
     return view('main.pages.team');
 });
+
+route::get('service' , function () {
+    return view('main.pages.servicesDetail');
+});

@@ -535,3 +535,54 @@ a {
         @extend .master-img;
     }
 }
+
+.services {
+    padding: 150px 0px;
+    background-image: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.01),
+            rgba(255, 255, 255, 1) 85%
+        ),
+        radial-gradient(
+            ellipse at top left,
+            rgba(4, 159, 249, 0.384),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at top right,
+            rgba(35, 18, 190, 0.13),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at center right,
+            rgba(20, 4, 249, 0.363),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at bottom left,
+            rgba(255, 219, 101, 0.342),
+            transparent 50%
+        );
+
+    .service-header {
+        @extend .header;
+        color: $primary;
+        font-size: 1.8rem;
+    }
+    .service-caption {
+        color: $black;
+        font-weight: map-get($font-weights, semibold);
+        font-size: 1.2rem;
+        text-align: justify;
+    }
+    nav {
+        position: sticky;
+        top: 5rem;
+        align-self: start;
+    }
+    .nav-link {
+        color: $primary;
+        font-size: 1rem;
+        font-weight: map-get($font-weights, semibold);
+    }
+}
