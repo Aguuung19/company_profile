@@ -24,3 +24,7 @@ Route::get('/visi-misi' , function () {
 route::get('/struktur-organisasi' , function () {
     return view('main.pages.organizationalStructure');
 });
+
+route::get('team' , function () {
+    return view('main.pages.team');
+});
