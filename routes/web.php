@@ -32,3 +32,7 @@ route::get('team' , function () {
 route::get('service' , function () {
     return view('main.pages.servicesDetail');
 });
+
+route::get('document' , function () {
+    return view('main.pages.documents');
+});

@@ -586,3 +586,68 @@ a {
         font-weight: map-get($font-weights, semibold);
     }
 }
+
+.documents {
+    padding: 150px 0px;
+    background-image: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.01),
+            rgba(255, 255, 255, 1) 85%
+        ),
+        radial-gradient(
+            ellipse at top left,
+            rgba(4, 159, 249, 0.384),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at top right,
+            rgba(35, 18, 190, 0.13),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at center right,
+            rgba(20, 4, 249, 0.363),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at bottom left,
+            rgba(255, 219, 101, 0.342),
+            transparent 50%
+        );
+
+    .doc-box {
+        box-shadow: 0px 20px 36px 9px $shadow !important;
+        padding: 30px;
+        margin-top: 30px;
+        border-radius: 20px;
+    }
+    .doc-header {
+        @extend .header;
+        font-size: 1.8rem;
+        color: $primary;
+    }
+    .btn-view {
+        @extend .btn-master;
+        color: $white;
+        background: $primary;
+        box-shadow: 0px 20px 36px 9px $shadow !important;
+
+        &:hover {
+            box-shadow: 0px 20px 36px 9px rgba(4, 159, 249, 0.384) !important;
+            transform: scale(1.1);
+            transition: transform 300ms ease-in-out;
+        }
+    }
+    .btn-download {
+        @extend .btn-master;
+        color: $white;
+        background: $primary;
+        box-shadow: 0px 20px 36px 9px $shadow !important;
+
+        &:hover {
+            box-shadow: 0px 20px 36px 9px rgba(4, 159, 249, 0.384) !important;
+            transform: scale(1.1);
+            transition: transform 300ms ease-in-out;
+        }
+    }
+}

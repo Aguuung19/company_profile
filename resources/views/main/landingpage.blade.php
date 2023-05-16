@@ -7,7 +7,7 @@
             <div class="col-lg-6 col-md-6 col-12 align-self-center">
                 <h1 class="hero-header">Badan Pengelola Sistem Teknologi Informasi</h1>
                 <p class="hero-caption">Unit Pelaksana teknik di bidang pengembangan teknologi informasi dan komunikasi di <b>Universitas Balikpapan</b> </p>
-                <a href="#!" class="btn btn-hero">Get Started</a>
+                <a href="#services" class="btn btn-hero">Get Started</a>
             </div>
             <div class="col-lg-6 col-md-6 col-12 mt-5 mt-lg-0" >
                 <div class="hero-wrap" data-aos="zoom-in" data-aos-interval="3000">
@@ -20,7 +20,7 @@
     </div>
 </section>
 
-<section class="service">
+<section class="service" id="services">
     <div class="container">
         <h2 class="service-header">Layanan BPSTI Univesitas Balikpapan </h2>
     </div>

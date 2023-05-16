@@ -30,7 +30,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Dokumen</a>
+                    <a class="nav-link" href="{{url('/document')}}">Dokumen</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Berita</a>
