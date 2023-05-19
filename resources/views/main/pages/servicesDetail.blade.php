@@ -10,7 +10,7 @@
             <div class="col-lg-10 col-12">
                 <div class="row">
                     <div class="col-lg-3 col-12">
-                        <nav id="service-nav" class="h-100 fixed  flex-column align-items-stretch pe-2 border-end">
+                        <nav id="service-nav" class="h-100 fixed  flex-column align-items-stretch pe-2 border-end" data-aos="fade-left" data-aos-delay="100">
                             <nav class="nav flex-column">
                                 <a href="#item-1" class="nav-link">Perbaikan Jaringan</a>
                                 <a href="#item-2" class="nav-link">Permohonan Pemasangan Jaringan</a>
@@ -21,7 +21,7 @@
                     </div>
                     <div class="col-lg-9 col-12 mt-5 mt-lg-0">
 
-                            <div class="service-desc" id="item-1">
+                            <div class="service-desc" id="item-1" data-aos="fade-up" data-aos-delay="200">
                                 <h1 class="service-header">Service 1</h1>
                                 <p class="service-caption">
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
@@ -31,7 +31,7 @@
                                     Nobis quae delectus eos architecto aliquid harum consequatur excepturi autem repellat eaque. Neque!
                                 </p>
                             </div>
-                            <div class="service-desc" id="item-2">
+                            <div class="service-desc" id="item-2" data-aos="fade-up" data-aos-delay="300">
                                 <h1 class="service-header">Service 2</h1>
                                 <p class="service-caption">
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -41,7 +41,7 @@
                                     quisquam iusto porro dolor dolorem repellendus! Enim, est!
                                 </p>
                             </div>
-                            <div class="service-desc" id="item-3">
+                            <div class="service-desc" id="item-3" data-aos="fade-up" data-aos-delay="400">
                                 <h1 class="service-header">Service 3</h1>
                                 <p class="service-caption">
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -51,7 +51,7 @@
                                     quisquam iusto porro dolor dolorem repellendus! Enim, est!
                                 </p>
                             </div>
-                            <div class="service-desc" id="item-4">
+                            <div class="service-desc" id="item-4" data-aos="fade-up" data-aos-delay="500">
                                 <h1 class="service-header">Service 4</h1>
                                 <p class="service-caption">
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.

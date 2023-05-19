@@ -9,7 +9,7 @@
                         <div class="col-12 text-center">
                             <h1 class="detail-header">Judul</h1>
                         </div>
-                        <div class="col-12 mt-3 detail-box">
+                        <div class="col-12 mt-3 detail-box" data-aos="zoom-in">
                             <div class="detail-wrap">
                                 <div class="detail-img" style="background : url('{{asset('images/image1.webp')}}')">
 

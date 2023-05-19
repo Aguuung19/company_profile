@@ -8,7 +8,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-10 col-12">
-                    <div class="row us-box">
+                    <div class="row us-box" data-aos="zoom-in" data-aos-delay="100">
                         <div class="col-lg-4 col-12">
                             <div class="us-wrap">
                                 <div class="us-img" style="background : url('{{asset('images/image1.webp')}}')">
@@ -24,7 +24,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="row mt-5 us-box">
+                    <div class="row mt-5 us-box" data-aos="fade-up" data-aos-delay="200">
                         <div class="col-12">
                             <h2 class="us-header">
                                 #Note

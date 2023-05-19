@@ -7,7 +7,7 @@
             <h1 class="doc-header">Dokumen</h1>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-10 col-12 doc-box">
+            <div class="col-lg-10 col-12 doc-box" data-aos="zoom-in">
                 <table class="table">
                     <thead>
                         <tr>
