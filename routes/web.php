@@ -36,3 +36,19 @@ route::get('service' , function () {
 route::get('document' , function () {
     return view('main.pages.documents');
 });
+
+route::get('faq' , function() {
+    return view('main.pages.faq');
+});
+
+route::get('kontak' , function() {
+    return view('main.pages.aboutus');
+});
+
+route::get('article' , function() {
+    return view('main.pages.articles');
+});
+
+route::get('article-detail' , function() {
+    return view('main.pages.articleDetail');
+});

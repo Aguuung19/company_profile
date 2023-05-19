@@ -62,51 +62,57 @@
                     
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-lg-4 col-12">
-                                    <div class="news-wrap">
-                                        <div class="news-img" style="background: url('{{asset('images/image1.webp')}}')">
+                            <a href="{{url('article-detail')}}">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12">
+                                        <div class="news-wrap">
+                                            <div class="news-img" style="background: url('{{asset('images/image1.webp')}}')">
 
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="col-lg-8 col-12 align-self-center mt-3 mt-lg-0">
+                                            <h2 class="news-subheader">Judul Berita 1</h2>
+                                            <p class="news-caption">some excerpt here</p>
+                                    </div>
                                 </div>
-                                <div class="col-lg-8 col-12 align-self-center mt-3 mt-lg-0">
-                                        <h2 class="news-subheader">Judul Berita 1</h2>
-                                        <p class="news-caption">some excerpt here</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-lg-4 col-12">
-                                    <div class="news-wrap">
-                                        <div class="news-img" style="background: url('{{asset('images/image1.webp')}}')">
+                            <a href="{{url('article-detail')}}">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12">
+                                        <div class="news-wrap">
+                                            <div class="news-img" style="background: url('{{asset('images/image1.webp')}}')">
 
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="col-lg-8 col-12 align-self-center mt-3 mt-lg-0">
+                                            <h2 class="news-subheader">Judul Berita 2</h2>
+                                            <p class="news-caption">some excerpt here</p>
+                                    </div>
                                 </div>
-                                <div class="col-lg-8 col-12 align-self-center mt-3 mt-lg-0">
-                                        <h2 class="news-subheader">Judul Berita 2</h2>
-                                        <p class="news-caption">some excerpt here</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
 
                         <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-lg-4 col-12">
-                                    <div class="news-wrap">
-                                        <div class="news-img" style="background: url('{{asset('images/image1.webp')}}')">
+                            <a href="{{url('article-detail')}}">
+                                <div class="row">
+                                    <div class="col-lg-4 col-12">
+                                        <div class="news-wrap">
+                                            <div class="news-img" style="background: url('{{asset('images/image1.webp')}}')">
 
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="col-lg-8 col-12 align-self-center mt-3 mt-lg-0">
+                                            <h2 class="news-subheader">Judul Berita 3</h2>
+                                            <p class="news-caption">some excerpt here</p>
+                                    </div>
                                 </div>
-                                <div class="col-lg-8 col-12 align-self-center mt-3 mt-lg-0">
-                                        <h2 class="news-subheader">Judul Berita 3</h2>
-                                        <p class="news-caption">some excerpt here</p>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                      <button class="carousel-control-prev" type="button" data-bs-target="#newscarousel" data-bs-slide="prev">

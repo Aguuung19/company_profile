@@ -33,13 +33,13 @@
                     <a class="nav-link" href="{{url('/document')}}">Dokumen</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Berita</a>
+                    <a class="nav-link" href="{{url('/article')}}">Berita</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Kontak</a>
+                    <a class="nav-link" href="{{url('/kontak')}}">Kontak</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#faq">FAQ</a>
+                    <a class="nav-link" href="{{url('/faq')}}">FAQ</a>
                 </li>
                 
             </ul>
