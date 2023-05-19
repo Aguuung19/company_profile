@@ -52,3 +52,7 @@ route::get('article' , function() {
 route::get('article-detail' , function() {
     return view('main.pages.articleDetail');
 });
+
+route::get('login' , function() {
+    return view('main.pages.login');
+});
