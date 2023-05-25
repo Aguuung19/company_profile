@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10 col-12">
-                <div class="row">
+                <div class="row text-center text-lg-start">
                     <div class="col-lg-4 col-12">
                         <div class="footer-wrap">
                             <div class="footer-img" style="background: url('{{asset('images/image1.webp')}}')">
