@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\dashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,46 +15,52 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('main.landingpage');
+Route::get("/", function () {
+    return view("main.landingpage");
 });
 
-Route::get('/visi-misi' , function () {
-    return view('main.pages.visionAndMission');
+Route::get("/visi-misi", function () {
+    return view("main.pages.visionAndMission");
 });
 
-route::get('/struktur-organisasi' , function () {
-    return view('main.pages.organizationalStructure');
+route::get("/struktur-organisasi", function () {
+    return view("main.pages.organizationalStructure");
 });
 
-route::get('team' , function () {
-    return view('main.pages.team');
+route::get("team", function () {
+    return view("main.pages.team");
 });
 
-route::get('service' , function () {
-    return view('main.pages.servicesDetail');
+route::get("service", function () {
+    return view("main.pages.servicesDetail");
 });
 
-route::get('document' , function () {
-    return view('main.pages.documents');
+route::get("document", function () {
+    return view("main.pages.documents");
 });
 
-route::get('faq' , function() {
-    return view('main.pages.faq');
+route::get("faq", function () {
+    return view("main.pages.faq");
 });
 
-route::get('kontak' , function() {
-    return view('main.pages.aboutus');
+route::get("kontak", function () {
+    return view("main.pages.aboutus");
 });
 
-route::get('article' , function() {
-    return view('main.pages.articles');
+route::get("article", function () {
+    return view("main.pages.articles");
 });
 
-route::get('article-detail' , function() {
-    return view('main.pages.articleDetail');
+route::get("article-detail", function () {
+    return view("main.pages.articleDetail");
 });
 
-route::get('login' , function() {
-    return view('main.pages.login');
-});
+route::get("/login", [LoginController::class, "index"])
+    ->middleware("guest")
+    ->name("login");
+route::post("/user-login", [LoginController::class, "authenticate"]);
+route::post("/logout", [LoginController::class, "logout"])->middleware("auth");
+
+route::get("/dashboard", [dashboardController::class, "index"])->middleware(
+    "auth"
+);
