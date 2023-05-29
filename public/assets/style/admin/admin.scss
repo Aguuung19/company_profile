@@ -9,6 +9,13 @@ body {
     position: relative;
 }
 
+.btn-master {
+    padding: 15px 26px;
+    border-radius: 10px;
+    font-weight: map-get($font-weights, semibold);
+    border: 0px;
+}
+
 .header {
     color: $primary;
     font-weight: map-get($font-weights, bold);
@@ -130,6 +137,32 @@ body {
     .dashboard-caption {
         @extend .caption;
         font-size: 1rem;
+    }
+}
+
+.landing-page-setting {
+    @extend .box;
+    margin-top: 30px;
+    padding: 15px;
+
+    .lp-header {
+        @extend .header;
+        font-size: 1.5rem;
+    }
+    .lp-subheader {
+        @extend .header;
+        font-size: 1.3rem;
+    }
+
+    .lp-caption {
+        @extend .caption;
+        font-size: 1rem;
+    }
+
+    .btn-lp-edit {
+        @extend .btn-master;
+        background: $primary;
+        color: $white;
     }
 }
 
