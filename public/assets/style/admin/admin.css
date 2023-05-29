@@ -1,1 +1,107 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");/*# sourceMappingURL=admin.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+.header, .dashboard-home .dashboard-header {
+  color: #005bc5;
+  font-weight: 700;
+}
+
+.caption, .dashboard-home .dashboard-caption {
+  color: #252525;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.box, .dashboard-home {
+  box-shadow: 0px 20px 36px 9px rgba(0, 91, 197, 0.2) !important;
+  border-radius: 20px;
+  width: 100%;
+  text-align: start;
+}
+
+.gradient {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgb(255, 255, 255) 85%), radial-gradient(ellipse at top left, rgba(4, 159, 249, 0.384), transparent 50%), radial-gradient(ellipse at top right, rgba(35, 18, 190, 0.13), transparent 50%), radial-gradient(ellipse at center right, rgba(20, 4, 249, 0.363), transparent 50%), radial-gradient(ellipse at center left, rgba(252, 202, 38, 0.342), transparent 50%);
+}
+
+.nb-admin {
+  box-shadow: 0px 10px 36px 9px rgba(0, 91, 197, 0.2);
+  background: #fff;
+}
+.nb-admin .dropdown-menu.show {
+  border: none;
+  color: #252525;
+  background: #fff;
+  box-shadow: 0px 10px 36px 9px rgba(0, 91, 197, 0.2);
+}
+.nb-admin button {
+  font-weight: 600;
+}
+
+.page-content {
+  padding-top: 70px;
+}
+.page-content .list-group {
+  box-shadow: 0px 20px 36px 9px rgba(0, 91, 197, 0.2) !important;
+  border-top-right-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: start;
+  font-weight: 600;
+}
+.page-content .list-group-item {
+  border: none;
+  background: transparent !important;
+}
+.page-content .list-group-item:hover {
+  color: #005bc5;
+  transform: scale(1.05);
+  transition: transform 200ms ease-in-out;
+}
+.page-content .main-content {
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-left: 20px !important;
+}
+.page-content .menu-profile {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.page-content .menu-profile .btn {
+  font-weight: 600 !important;
+}
+
+#sidebar-nav {
+  width: 280px;
+}
+
+.dashboard-home {
+  margin-top: 30px;
+  padding: 0px 15px 15px 15px;
+}
+.dashboard-home .dashboard-header {
+  font-size: 1.5rem;
+}
+.dashboard-home .dashboard-caption {
+  font-size: 1rem;
+}
+
+footer {
+  position: absolute;
+  box-shadow: 0px 0px 15px 5px rgba(0, 91, 197, 0.2) !important;
+  bottom: 0;
+  text-align: center;
+  color: #252525;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px;
+  width: 100%;
+}/*# sourceMappingURL=admin.css.map */

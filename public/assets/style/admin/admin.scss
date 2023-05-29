@@ -1,3 +1,146 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import "../components/color";
 @import "../components/typo";
+
+body {
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+.header {
+    color: $primary;
+    font-weight: map-get($font-weights, bold);
+}
+
+.caption {
+    color: $black;
+    font-weight: map-get($font-weights, regular);
+    font-size: 1.3rem;
+}
+
+.box {
+    box-shadow: 0px 20px 36px 9px $shadow !important;
+    border-radius: 20px;
+    width: 100%;
+    text-align: start;
+}
+
+.gradient {
+    background-image: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.01),
+            rgba(255, 255, 255, 1) 85%
+        ),
+        radial-gradient(
+            ellipse at top left,
+            rgba(4, 159, 249, 0.384),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at top right,
+            rgba(35, 18, 190, 0.13),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at center right,
+            rgba(20, 4, 249, 0.363),
+            transparent 50%
+        ),
+        radial-gradient(
+            ellipse at center left,
+            rgba(252, 202, 38, 0.342),
+            transparent 50%
+        );
+}
+
+.nb-admin {
+    box-shadow: 0px 10px 36px 9px $shadow;
+    background: $white;
+
+    .dropdown-menu.show {
+        border: none;
+        color: $black;
+        background: $white;
+        box-shadow: 0px 10px 36px 9px $shadow;
+    }
+
+    button {
+        font-weight: map-get($font-weights, semibold);
+    }
+}
+
+.page-content {
+    padding-top: 70px;
+
+    .list-group {
+        box-shadow: 0px 20px 36px 9px $shadow !important;
+        border-top-right-radius: 20px !important;
+        border-bottom-right-radius: 20px !important;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+        text-align: start;
+        font-weight: map-get($font-weights, semibold);
+    }
+
+    .list-group-item {
+        border: none;
+        background: transparent !important;
+
+        &:hover {
+            color: $primary;
+            transform: scale(1.05);
+            transition: transform 200ms ease-in-out;
+        }
+    }
+    .main-content {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-left: 20px !important;
+    }
+
+    .menu-profile {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .btn {
+            font-weight: map-get($font-weights, semibold) !important;
+        }
+    }
+}
+
+#sidebar-nav {
+    width: 280px;
+}
+
+.dashboard-home {
+    @extend .box;
+    margin-top: 30px;
+    padding: 0px 15px 15px 15px;
+
+    .dashboard-header {
+        @extend .header;
+        font-size: 1.5rem;
+    }
+
+    .dashboard-caption {
+        @extend .caption;
+        font-size: 1rem;
+    }
+}
+
+footer {
+    position: absolute;
+    box-shadow: 0px 0px 15px 5px $shadow !important;
+    bottom: 0;
+    text-align: center;
+    color: $black;
+    font-weight: map-get($font-weights, semibold);
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+}
