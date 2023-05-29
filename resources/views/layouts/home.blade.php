@@ -21,7 +21,7 @@
 <section class="page-content">
   <div class="container-fluid">
     <div class="row flex-nowrap">
-        <div class="col-auto px-0">
+        <div class="col-auto mb-5 px-0">
            @include('layouts/components/admin/sidebar')
         </div>
         <main class="col ps-md-2 pt-2 main-content">

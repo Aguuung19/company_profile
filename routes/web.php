@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\LandingPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,3 +66,7 @@ route::post("/logout", [LoginController::class, "logout"])->middleware("auth");
 route::get("/dashboard", [dashboardController::class, "index"])->middleware(
     "auth"
 );
+
+route::resource("landing_page", LandingPageController::class)
+    ->only(["index", "edit", "update"])
+    ->middleware("auth");
