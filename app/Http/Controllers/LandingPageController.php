@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\landing_page;
+use Auth;
 use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
@@ -14,7 +15,12 @@ class LandingPageController extends Controller
      */
     public function index()
     {
-        return view("admin.Landing-Page.index");
+        if (Auth::user()->role_id == 1 || Auth::user()->role_id == 2) {
+            $data["item"] = landing_page::first();
+            return view("admin.Landing-Page.index", $data);
+        } else {
+            abort(403);
+        }
     }
 
     /**

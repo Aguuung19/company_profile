@@ -14,6 +14,10 @@
             </a>
             <ul class="dropdown-menu">
               <li class="text-center">
+                <a href="{{url('/')}}" target="_blank" class="text-success text-decoration-none text-truncate"><span><b>View Site</b></span></a>
+              </li>
+              <hr>
+              <li class="text-center">
                 <form action="{{url('/logout')}}" method="post">
                   @csrf
                   <button class="btn text-danger" type="submit">Logout</button>
