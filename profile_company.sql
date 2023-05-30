@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2023 at 11:05 AM
+-- Generation Time: May 30, 2023 at 10:44 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -165,6 +165,13 @@ CREATE TABLE `landing_pages` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `landing_pages`
+--
+
+INSERT INTO `landing_pages` (`id`, `logo`, `hero_banner`, `hero_title`, `hero_desc`, `hero_btn`, `hero_btn_link`, `section2_title`, `footer_logo`, `footer_title1`, `footer_title2`, `created_at`, `updated_at`) VALUES
+(1, '-', '-', 'Badan Pengelola Sistem Teknologi Informasi', 'Unit Pelaksana teknik di bidang pengembangan teknologi informasi dan komunikasi di <b>Universitas Balikpapan</b>', 'Get Started', '#service', 'Layanan BPSTI Universitas Balikpapan', '-', 'Akses Cepat', 'Kontak', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -616,7 +623,7 @@ ALTER TABLE `footer_links`
 -- AUTO_INCREMENT for table `landing_pages`
 --
 ALTER TABLE `landing_pages`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `logs`
