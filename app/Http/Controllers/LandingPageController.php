@@ -75,7 +75,26 @@ class LandingPageController extends Controller
      */
     public function update(Request $request, landing_page $landing_page)
     {
-        //
+        if (Auth::user()->role_id == 1 || Auth::user()->role_id == 2) {
+            $validateData = $request->validate([
+                "hero_title" => "required|max:255",
+                "hero_desc" => "required",
+                "hero_btn" => "required",
+                "hero_btn_link" => "required",
+                "section2_title" => "required",
+                "footer_title1" => "required",
+                "footer_title2" => "required",
+            ]);
+
+            landing_page::where("id", $landing_page->id)->update($validateData);
+
+            return redirect("/landing_page")->with(
+                "success",
+                "Data Successfully Updated"
+            );
+        } else {
+            abort(403);
+        }
     }
 
     /**

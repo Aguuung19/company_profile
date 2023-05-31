@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ViewController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\LandingPageController;
@@ -17,9 +18,7 @@ use App\Http\Controllers\LandingPageController;
 |
 */
 
-Route::get("/", function () {
-    return view("main.landingpage");
-});
+route::get("/", [ViewController::class, "index"]);
 
 Route::get("/visi-misi", function () {
     return view("main.pages.visionAndMission");

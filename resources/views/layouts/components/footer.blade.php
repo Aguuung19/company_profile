@@ -3,18 +3,18 @@
         <div class="row justify-content-center">
             <div class="col-lg-10 col-12">
                 <div class="row text-center text-lg-start">
-                    <div class="col-lg-4 col-12">
+                    <div class="col-lg-3 col-12">
                         <div class="footer-wrap">
-                            <div class="footer-img" style="background: url('{{asset('images/image1.webp')}}')">
+                            <div class="footer-img" style="background: url('{{asset('images/footer.webp')}}')">
 
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-12 mt-3 mt-lg-0">
+                    <div class="col-lg-5 col-12 mt-3 mt-lg-0">
                         <div class="row pb-3">
                             <div class="col-12">
-                                <h1 class="footer-subheader">Akses Cepat</h1>
+                                <h1 class="footer-subheader">{{$home->footer_title1}}</h1>
                             </div>
                         </div>
                         <div class="row">
@@ -42,7 +42,7 @@
                     <div class="col-lg-4 col-12 mt-3 mt-lg-0">
                         <div class="row pb-3">
                             <div class="col-12">
-                                <h1 class="footer-subheader">Kontak</h1>
+                                <h1 class="footer-subheader">{{$home->footer_title2}}</h1>
                             </div>
                         </div>
                         <div class="row">

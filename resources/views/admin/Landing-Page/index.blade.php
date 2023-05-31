@@ -2,6 +2,12 @@
 
 @section('content')
     <section class="landing-page-setting" data-aos="zoom-in" data-aos-delay="100">
+        @if(session()->has('success'))
+        <div class="alert alert-success" role="alert">
+            {{ session('success')}}
+        </div>
+        @endif
+
        <div class="row">
             <div class="col align-self-center">
                 <h1 class="lp-header">Landing Page Setting</h1> 

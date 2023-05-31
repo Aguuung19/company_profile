@@ -5,9 +5,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-12 align-self-center">
-                <h1 class="hero-header">Badan Pengelola Sistem Teknologi Informasi</h1>
-                <p class="hero-caption">Unit Pelaksana teknik di bidang pengembangan teknologi informasi dan komunikasi di <b>Universitas Balikpapan</b> </p>
-                <a href="#services" class="btn btn-hero">Get Started</a>
+                <h1 class="hero-header">{{$item->hero_title}}</h1>
+                <p class="hero-caption">{!!$item->hero_desc!!}</p>
+                <a href="{{$item->hero_btn_link}}" class="btn btn-hero">{{$item->hero_btn}}</a>
             </div>
             <div class="col-lg-6 col-md-6 col-12 mt-5 mt-lg-0" >
                 <div class="hero-wrap" data-aos="zoom-in" data-aos-interval="3000">
@@ -22,7 +22,7 @@
 
 <section class="service" id="services">
     <div class="container">
-        <h2 class="service-header">Layanan BPSTI Univesitas Balikpapan </h2>
+        <h2 class="service-header">{{$item->section2_title}}</h2>
     </div>
     <div class="container">
         <div class="row justify-content-center" data-aos="fade-up" data-aos-interval="3000">

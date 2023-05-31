@@ -1,6 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top nb-main">
         <div class="container">
-            <a class="navbar-brand" href="{{url('/')}}">Logo</a>
+            <a class="navbar-brand" href="{{url('/')}}">
+                <div class="nb-wrap">
+                    <div class="nb-img" style="background: url('{{asset('images/logo.webp')}}')">
+
+                    </div>
+                </div>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
