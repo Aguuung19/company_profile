@@ -18,22 +18,11 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 col-12">
-                                <ul class="footer-list">
-                                    <li><a href="#">PMB</a></li>
-                                    <li><a href="#">SIAT</a></li>
-                                    <li><a href="#">E-Learning</a></li>
-                                    <li><a href="#">KKN</a></li>
-                                    <li><a href="#">WISUDA</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6 col-12">
-                                <ul class="footer-list">
-                                    <li><a href="#">Patnership</a></li>
-                                    <li><a href="#">Simpeg</a></li>
-                                    <li><a href="#">Simdos</a></li>
-                                    <li><a href="#">Tracerstudy</a></li>
-                                    <li><a href="#">Website Utama</a></li>
+                            <div class="col-12">
+                                <ul class="list-divide footer-list">
+                                    @foreach($footer1 as $link)
+                                        <li><a href="{{$link->link}}" target="{{$link->target}}">{{$link->title}}</a></li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -47,12 +36,10 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <p class="footer-caption">Jl.Pupuk Gn.Bahagia Balikpapan</p>
-                            </div>
-                            <div class="col-12">
                                 <ul class="footer-list">
-                                    <li>contact</li>
-                                    <li>It@uniba-bpn.ac.id</li>
+                                    @foreach($footer2 as $link)
+                                        <li><a href="{{$link->link}}" target="{{$link->target}}">{{$link->title}}</a></li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>

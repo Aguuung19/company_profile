@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\FooterController;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\LandingPageController;
 
@@ -68,4 +69,8 @@ route::get("/dashboard", [dashboardController::class, "index"])->middleware(
 
 route::resource("landing_page", LandingPageController::class)
     ->only(["index", "edit", "update"])
+    ->middleware("auth");
+
+route::resource("footer_link", FooterController::class)
+    ->only(["store", "destroy"])
     ->middleware("auth");

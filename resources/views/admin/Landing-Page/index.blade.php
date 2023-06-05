@@ -95,31 +95,30 @@
                                     <th class="text-truncate">Name</th>
                                     <th class="text-truncate">Section</th>
                                     <th class="text-truncate">Link</th>
-                                    <th class="text-truncate"> <a href="#" class="btn btn-success">+ Tambah</a></th>
+                                    <th class="text-truncate">
+                                        <a href="#" class="btn btn-success"data-bs-toggle="offcanvas" data-bs-target="#offCanvasFooter" aria-controls="offCanvasFooter">
+                                            <i class="bi bi-plus-circle"></i> 
+                                            Tambah
+                                        </a>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td><b>1</b></td>
-                                    <td>web 1</td>
-                                    <td>1</td>
-                                    <td>https://www.google.com/</td>
-                                    <td>hapus</td>
-                                </tr>
-                                <tr>
-                                    <td><b>2</b></td>
-                                    <td>web 2</td>
-                                    <td>1</td>
-                                    <td>https://www.google.com/</td>
-                                    <td>hapus</td>
-                                </tr>
-                                <tr>
-                                    <td><b>3</b></td>
-                                    <td>web 3</td>
-                                    <td>1</td>
-                                    <td>https://www.google.com/</td>
-                                    <td>hapus</td>
-                                </tr>
+                                @foreach($footer1 as $link)
+                                    <tr>
+                                        <td>{{$loop->iteration}}</td>
+                                        <td>{{$link->title}}</td>
+                                        <td>{{$link->section}}</td>
+                                        <td><a href="{{$link->link}}" target="{{$link->target}}">{{$link->link}}</a></td>
+                                        <td>
+                                            <form action="{{url('footer_link/'.$link->id)}}" method="post">
+                                            @method('delete')
+                                            @csrf
+                                            <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure to delete this data?')"><i class="bi bi-trash "></i></button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -128,6 +127,7 @@
             <div class="col-lg-6 col-12 pt-5">
                 <div class="form-group">
                     <h2 class="lp-subheader">Footer section 2 Title :</h2>
+                    
                     <h1 class="lp-header"><b>{{$item->footer_title2}}</b></h1>
                     <div class="table-responsive mx-auto">
                         <table class="table mt-3">
@@ -137,31 +137,31 @@
                                     <th class="text-truncate">Name</th>
                                     <th class="text-truncate">Section</th>
                                     <th class="text-truncate">Link</th>
-                                    <th class="text-truncate"> <a href="#" class="btn btn-success">+ Tambah</a></th>
+                                    <th class="text-truncate"> 
+                                        <a href="#" class="btn btn-success"data-bs-toggle="offcanvas" data-bs-target="#offCanvasFooter" aria-controls="offCanvasFooter">
+                                            <i class="bi bi-plus-circle"></i> 
+                                            Tambah
+                                        </a>
+                                    </th>
+
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td><b>1</b></td>
-                                    <td>web 1</td>
-                                    <td>2</td>
-                                    <td>https://www.google.com/</td>
-                                    <td>hapus</td>
-                                </tr>
-                                <tr>
-                                    <td><b>2</b></td>
-                                    <td>web 2</td>
-                                    <td>2</td>
-                                    <td>https://www.google.com/</td>
-                                    <td>hapus</td>
-                                </tr>
-                                <tr>
-                                    <td><b>3</b></td>
-                                    <td>web 3</td>
-                                    <td>2</td>
-                                    <td>https://www.google.com/</td>
-                                    <td>hapus</td>
-                                </tr>
+                               @foreach($footer2 as $link2)
+                                    <tr>
+                                        <td>{{$loop->iteration}}</td>
+                                        <td>{{$link2->title}}</td>
+                                        <td>{{$link2->section}}</td>
+                                        <td><a href="{{$link2->link}}" target="{{$link2->target}}">{{$link2->link}}</a></td>
+                                        <td>
+                                            <form action="{{url('footer_link/'.$link2->id)}}" method="post">
+                                            @method('delete')
+                                            @csrf
+                                            <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure to delete this data?')"><i class="bi bi-trash "></i></button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -177,6 +177,16 @@
         </div>
         <div class="offcanvas-body">
             @include('admin.Landing-Page.edit')
+        </div>
+    </div>
+
+    <div class="offcanvas offcanfas-lg offcanvas-bottom"  tabindex="-1" id="offCanvasFooter" aria-labelledby="offCanvasFooterLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title header" id="offcanvasRightLabel">Tambah Footer Links</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            @include('admin.Footer-Links.add')
         </div>
     </div>
 

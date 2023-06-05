@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\landing_page;
+use App\Models\footer_link;
 use Auth;
 use Illuminate\Http\Request;
 
@@ -17,6 +18,8 @@ class LandingPageController extends Controller
     {
         if (Auth::user()->role_id == 1 || Auth::user()->role_id == 2) {
             $data["item"] = landing_page::first();
+            $data["footer1"] = footer_link::where("section", "1")->get();
+            $data["footer2"] = footer_link::where("section", "2")->get();
             return view("admin.Landing-Page.index", $data);
         } else {
             abort(403);

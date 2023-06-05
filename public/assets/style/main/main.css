@@ -222,7 +222,8 @@ a {
   display: block;
   overflow: hidden;
   width: 100%;
-  height: 200px;
+  height: 100%;
+  max-height: 200px;
   border-radius: 20px;
 }
 .footer-main .footer-header {
@@ -242,6 +243,23 @@ a {
   text-align: center;
   font-size: 1rem;
   color: #fff;
+}
+.footer-main .list-divide {
+  -moz-column-count: 2;
+       column-count: 2;
+}
+@media (max-width: 992px) {
+  .footer-main .list-divide {
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+  .footer-main .footer-wrap {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+  }
 }
 .footer-main .footer-list {
   list-style-type: none;
