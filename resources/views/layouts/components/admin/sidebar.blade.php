@@ -18,7 +18,7 @@
     <div id="sidebar-nav" class="list-group text-sm-start">
         <a href="{{url('dashboard')}}" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-house-door"></i> <span>Dashboard</span> </a>
         <a href="{{url('landing_page')}}" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-view-list"></i> <span>Landing Page Setting</span></a>
-        <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-person-badge"></i> <span>Profile</span></a>
+        <a href="{{url('profile')}}" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-person-badge"></i> <span>Profile</span></a>
         <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-newspaper"></i> <span>Article</span></a>
         <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-question-square"></i> <span>FAQ</span></a>
         <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-person-lines-fill"></i> <span>Contact</span></a>

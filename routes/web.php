@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FooterController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\LandingPageController;
 
@@ -73,4 +74,8 @@ route::resource("landing_page", LandingPageController::class)
 
 route::resource("footer_link", FooterController::class)
     ->only(["store", "destroy"])
+    ->middleware("auth");
+
+route::resource("profile", ProfileController::class)
+    ->only(["index", "edit", "update"])
     ->middleware("auth");

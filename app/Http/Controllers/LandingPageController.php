@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\landing_page;
 use App\Models\footer_link;
+use App\Models\logs;
 use Auth;
 use Illuminate\Http\Request;
 
@@ -89,7 +90,20 @@ class LandingPageController extends Controller
                 "footer_title2" => "required",
             ]);
 
-            landing_page::where("id", $landing_page->id)->update($validateData);
+            $update = landing_page::where("id", $landing_page->id)->update(
+                $validateData
+            );
+
+            if ($update) {
+                $user = Auth::user()->id;
+                $date = carbon::now();
+
+                logs::create([
+                    "user_id" => $user,
+                    "date" => $date,
+                    "activity" => "Melakukan UPDATE pada Landing Page Setting",
+                ]);
+            }
 
             return redirect("/landing_page")->with(
                 "success",

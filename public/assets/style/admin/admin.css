@@ -6,7 +6,7 @@ body {
   position: relative;
 }
 
-.btn-master, .landing-page-setting .btn-hero, .landing-page-setting .btn-lp-edit, .btn-edit {
+.btn-master, .profile-setting .btn-p-edit, .landing-page-setting .btn-hero, .landing-page-setting .btn-lp-edit, .btn-edit {
   padding: 15px 26px;
   border-radius: 10px;
   font-weight: 600;
@@ -19,7 +19,7 @@ body {
   align-self: center;
 }
 
-.header, .landing-page-setting .lp-subheader, .landing-page-setting .lp-header, .dashboard-home .dashboard-header, .subheader {
+.header, .profile-setting .p-subheader, .profile-setting .p-header, .landing-page-setting .lp-subheader, .landing-page-setting .lp-header, .dashboard-home .dashboard-header, .subheader {
   color: #005bc5;
   font-weight: 700;
 }
@@ -28,13 +28,13 @@ body {
   font-size: 1rem;
 }
 
-.caption, .landing-page-setting .lp-caption, .dashboard-home .dashboard-caption {
+.caption, .profile-setting .p-caption, .landing-page-setting .lp-caption, .dashboard-home .dashboard-caption {
   color: #252525;
   font-weight: 400;
   font-size: 1.3rem;
 }
 
-.box, .landing-page-setting, .dashboard-home {
+.box, .profile-setting, .landing-page-setting, .dashboard-home {
   box-shadow: 0px 20px 36px 9px rgba(0, 91, 197, 0.2) !important;
   border-radius: 20px;
   width: 100%;
@@ -178,6 +178,49 @@ body {
   box-shadow: 0px 20px 36px 9px rgba(4, 159, 249, 0.384) !important;
   transform: scale(1.1);
   transition: transform 300ms ease-in-out;
+}
+
+.profile-setting {
+  margin-top: 30px;
+  margin-bottom: 100px;
+  padding: 15px 30px 30px 30px;
+}
+.profile-setting .p-header {
+  color: #252525 !important;
+  font-size: 1.5rem;
+}
+.profile-setting .p-subheader {
+  font-size: 1.3rem;
+}
+.profile-setting .p-caption {
+  font-size: 1rem;
+}
+.profile-setting .btn-p-edit {
+  background: #005bc5;
+  color: #fff;
+}
+.profile-setting .img-master {
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+.profile-setting .hero-wrap {
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  box-shadow: 0px 20px 36px 9px rgba(0, 91, 197, 0.2) !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.profile-setting .team-wrap {
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
+  box-shadow: 0px 20px 36px 9px rgba(0, 91, 197, 0.2) !important;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 footer {
