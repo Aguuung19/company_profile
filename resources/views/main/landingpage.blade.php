@@ -11,7 +11,7 @@
             </div>
             <div class="col-lg-6 col-md-6 col-12 mt-5 mt-lg-0" >
                 <div class="hero-wrap" data-aos="zoom-in" data-aos-interval="3000">
-                    <div class="hero-img" fetchpriority="high" style="background: url('{{asset('images/image1.webp')}}')">
+                    <div class="hero-img" fetchpriority="high" style="background: url('{{asset('images/'.$item->hero_banner)}}')">
 
                     </div>
                 </div>

@@ -5,7 +5,7 @@
                 <div class="row text-center text-lg-start">
                     <div class="col-lg-3 col-12">
                         <div class="footer-wrap">
-                            <div class="footer-img" style="background: url('{{asset('images/footer.webp')}}')">
+                            <div class="footer-img" style="background: url('{{asset('images/'.$home->footer_logo)}}')">
 
                             </div>
                         </div>

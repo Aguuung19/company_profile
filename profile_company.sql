@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2023 at 10:42 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- Generation Time: Jun 11, 2023 at 11:28 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,13 +31,13 @@ CREATE TABLE `activities` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `job_id` bigint(20) UNSIGNED NOT NULL,
-  `desc` longtext DEFAULT NULL,
+  `desc` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `start_date` date DEFAULT NULL,
   `end_date` date DEFAULT NULL,
   `job_status_id` bigint(20) UNSIGNED NOT NULL,
   `status` int(11) NOT NULL,
-  `comment` text DEFAULT NULL,
-  `document` text DEFAULT NULL,
+  `comment` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `document` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -50,12 +50,12 @@ CREATE TABLE `activities` (
 
 CREATE TABLE `articles` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `slug` text NOT NULL,
-  `cover` text DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cover` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `category_id` bigint(20) UNSIGNED NOT NULL,
-  `content` longtext DEFAULT NULL,
-  `excerpt` varchar(255) DEFAULT NULL,
+  `content` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `excerpt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `status` int(11) NOT NULL,
   `published_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
@@ -71,11 +71,11 @@ CREATE TABLE `articles` (
 
 CREATE TABLE `contacts` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `section1_image` text DEFAULT NULL,
-  `section1_content` longtext DEFAULT NULL,
-  `section2_title` varchar(255) DEFAULT NULL,
-  `sectin2_content` longtext DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `section1_image` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `section1_content` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `section2_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sectin2_content` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -88,10 +88,10 @@ CREATE TABLE `contacts` (
 
 CREATE TABLE `documents` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `category_id` bigint(20) UNSIGNED NOT NULL,
-  `file` text NOT NULL,
-  `password` varchar(255) DEFAULT NULL,
+  `file` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -105,11 +105,11 @@ CREATE TABLE `documents` (
 
 CREATE TABLE `failed_jobs` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `uuid` varchar(255) NOT NULL,
-  `connection` text NOT NULL,
-  `queue` text NOT NULL,
-  `payload` longtext NOT NULL,
-  `exception` longtext NOT NULL,
+  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -121,8 +121,8 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `faqs` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `question` text NOT NULL,
-  `answer` varchar(255) NOT NULL,
+  `question` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `answer` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -136,10 +136,10 @@ CREATE TABLE `faqs` (
 
 CREATE TABLE `footer_links` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `section` varchar(255) NOT NULL,
-  `link` varchar(255) NOT NULL,
-  `target` varchar(255) DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `section` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `target` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -171,16 +171,16 @@ INSERT INTO `footer_links` (`id`, `title`, `section`, `link`, `target`, `created
 
 CREATE TABLE `landing_pages` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `logo` text NOT NULL,
-  `hero_banner` text NOT NULL,
-  `hero_title` varchar(255) NOT NULL,
-  `hero_desc` text NOT NULL,
-  `hero_btn` varchar(255) NOT NULL,
-  `hero_btn_link` varchar(255) NOT NULL,
-  `section2_title` varchar(255) NOT NULL,
-  `footer_logo` text NOT NULL,
-  `footer_title1` varchar(255) NOT NULL,
-  `footer_title2` varchar(255) NOT NULL,
+  `logo` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `hero_banner` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `hero_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `hero_desc` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `hero_btn` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `hero_btn_link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `section2_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `footer_logo` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `footer_title1` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `footer_title2` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -190,7 +190,7 @@ CREATE TABLE `landing_pages` (
 --
 
 INSERT INTO `landing_pages` (`id`, `logo`, `hero_banner`, `hero_title`, `hero_desc`, `hero_btn`, `hero_btn_link`, `section2_title`, `footer_logo`, `footer_title1`, `footer_title2`, `created_at`, `updated_at`) VALUES
-(1, 'image1.webp', '-', 'Badan Pengelola Sistem Teknologi Informasi', 'Unit Pelaksana teknik di bidang pengembangan teknologi informasi dan komunikasi di <b>Universitas Balikpapan</b>', 'Get Started', '#services', 'Layanan BPSTI Universitas Balikpapan', '-', 'Akses Cepat', 'Kontak', NULL, '2023-06-05 06:52:05');
+(1, 'image1.webp', 'hero.webp', 'Badan Pengelola Sistem Teknologi Informasi', 'Unit Pelaksana teknik di bidang pengembangan teknologi informasi dan komunikasi di <b>Universitas Balikpapan</b>', 'Get Started', '#services', 'Layanan BPSTI Universitas Balikpapan', 'footer.webp', 'Akses Cepat', 'Kontak', NULL, '2023-06-05 06:52:05');
 
 -- --------------------------------------------------------
 
@@ -201,7 +201,7 @@ INSERT INTO `landing_pages` (`id`, `logo`, `hero_banner`, `hero_title`, `hero_de
 CREATE TABLE `logs` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `user_id` bigint(20) UNSIGNED NOT NULL,
-  `activity` text NOT NULL,
+  `activity` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -239,8 +239,8 @@ INSERT INTO `logs` (`id`, `user_id`, `activity`, `date`, `created_at`, `updated_
 
 CREATE TABLE `master_categories` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `slug` text NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `menu_id` bigint(20) UNSIGNED NOT NULL,
   `status` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -255,8 +255,8 @@ CREATE TABLE `master_categories` (
 
 CREATE TABLE `master_jobs` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `slug` text NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -270,7 +270,7 @@ CREATE TABLE `master_jobs` (
 
 CREATE TABLE `master_jobs_statuses` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -284,8 +284,8 @@ CREATE TABLE `master_jobs_statuses` (
 
 CREATE TABLE `master_menus` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `slug` text NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -299,7 +299,7 @@ CREATE TABLE `master_menus` (
 
 CREATE TABLE `master_roles` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `role` varchar(255) NOT NULL,
+  `role` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -322,7 +322,7 @@ INSERT INTO `master_roles` (`id`, `role`, `status`, `created_at`, `updated_at`) 
 
 CREATE TABLE `migrations` (
   `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) NOT NULL,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -359,8 +359,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 
 CREATE TABLE `password_resets` (
-  `email` varchar(255) NOT NULL,
-  `token` varchar(255) NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -372,11 +372,11 @@ CREATE TABLE `password_resets` (
 
 CREATE TABLE `personal_access_tokens` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `tokenable_type` varchar(255) NOT NULL,
+  `tokenable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tokenable_id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `token` varchar(64) NOT NULL,
-  `abilities` text DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `abilities` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `last_used_at` timestamp NULL DEFAULT NULL,
   `expires_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -391,14 +391,14 @@ CREATE TABLE `personal_access_tokens` (
 
 CREATE TABLE `profiles` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `vision` text NOT NULL,
-  `vision_image` text DEFAULT NULL,
-  `mission` text NOT NULL,
-  `mission_image` text DEFAULT NULL,
-  `organization_structure_title` varchar(255) NOT NULL,
-  `organization_structure_image` text NOT NULL,
-  `teams_banner` text NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `vision` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `vision_image` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mission` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `mission_image` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `organization_structure_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `organization_structure_image` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `teams_banner` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -411,9 +411,9 @@ CREATE TABLE `profiles` (
 
 CREATE TABLE `services` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `category_id` bigint(20) UNSIGNED NOT NULL,
-  `content` longtext NOT NULL,
+  `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -427,17 +427,17 @@ CREATE TABLE `services` (
 
 CREATE TABLE `teams` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `profile_picture` text NOT NULL,
-  `fullname` varchar(255) NOT NULL,
-  `position` varchar(255) NOT NULL,
-  `link1_title` varchar(255) DEFAULT NULL,
-  `link1` text DEFAULT NULL,
-  `link2_title` varchar(255) DEFAULT NULL,
-  `link2` text DEFAULT NULL,
-  `link3_title` varchar(255) DEFAULT NULL,
-  `link3` text DEFAULT NULL,
-  `link4_title` varchar(255) DEFAULT NULL,
-  `link4` text DEFAULT NULL,
+  `profile_picture` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fullname` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `position` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link1_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `link1` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `link2_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `link2` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `link3_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `link3` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `link4_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `link4` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -450,12 +450,12 @@ CREATE TABLE `teams` (
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `role_id` bigint(20) UNSIGNED NOT NULL,
-  `remember_token` varchar(100) DEFAULT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
