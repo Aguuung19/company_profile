@@ -20,7 +20,7 @@
         <a href="{{url('landing_page')}}" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-view-list"></i> <span>Landing Page Setting</span></a>
         <a href="{{url('profile')}}" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-person-badge"></i> <span>Profile</span></a>
         <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-newspaper"></i> <span>Article</span></a>
-        <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-question-square"></i> <span>FAQ</span></a>
+        <a href="{{url('faq')}}" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-question-square"></i> <span>FAQ</span></a>
         <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-person-lines-fill"></i> <span>Contact</span></a>
         <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-file-earmark-pdf"></i> <span>Document</span></a>
         <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-journal-code"></i> <span>SOP & Layanan</span></a>

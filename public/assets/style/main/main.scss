@@ -477,11 +477,6 @@ a {
 
     .organization-img {
         @extend .master-img;
-
-        &:hover {
-            transform: scale(1.3);
-            transition: transform 300ms ease-in-out;
-        }
     }
 }
 

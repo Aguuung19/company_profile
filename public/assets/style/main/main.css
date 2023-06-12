@@ -326,11 +326,6 @@ a {
   height: 800px;
   border-radius: 20px;
 }
-.organizationalStructure .organization-img:hover {
-  transform: scale(1.3);
-  transition: transform 300ms ease-in-out;
-}
-
 .team {
   padding: 150px 0px;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgb(255, 255, 255) 85%), radial-gradient(ellipse at top left, rgba(4, 159, 249, 0.384), transparent 50%), radial-gradient(ellipse at top right, rgba(35, 18, 190, 0.13), transparent 50%), radial-gradient(ellipse at center right, rgba(20, 4, 249, 0.363), transparent 50%), radial-gradient(ellipse at bottom left, rgba(255, 219, 101, 0.342), transparent 50%);

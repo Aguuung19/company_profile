@@ -23,4 +23,11 @@ class ViewController extends Controller
 
         return view("main.pages.visionAndMission" ,$data);
     }
+
+    public function organisasi(){
+        $data["item"] = profile::first();
+        return view("main.pages.organizationalStructure" ,$data);
+    }
+
+
 }
