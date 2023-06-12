@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\profile;
 use Illuminate\Http\Request;
+use App\Models\logs;
 use Auth;
+use Carbon\Carbon;
 
 class ProfileController extends Controller
 {
@@ -16,7 +18,9 @@ class ProfileController extends Controller
     public function index()
     {
         if (Auth::user()->role_id == 1 || Auth::user()->role_id == 2) {
-            return view("admin.Profile.index");
+            $data["item"] = profile::first();
+
+            return view("admin.Profile.index", $data);
         } else {
             abort(403);
         }
@@ -74,7 +78,31 @@ class ProfileController extends Controller
      */
     public function update(Request $request, profile $profile)
     {
-        //
+        if (Auth::user()->role_id == 1 || Auth::user()->role_id == 2) {
+                $validatedData = $request->validate([
+                    'title' => 'required|max:255',
+                    'vision' => 'required',
+                    'mission' => 'required',
+                    'organization_structure_title' => 'required',
+                ]);
+
+                $update = profile::where("id" , $profile->id)->update($validatedData);
+
+                if ($update) {
+                    $user = Auth::user()->id;
+                    $date = carbon::now();
+
+                    logs::create([
+                        "user_id" => $user,
+                        "date" => $date,
+                        "activity" => "Melakukan UPDATE pada Profile Setting",
+                    ]);
+                }
+
+                return redirect("/profile")->with("success" , "Data Successfully Updated");
+        }else{
+            abort(403);
+        }
     }
 
     /**

@@ -21,7 +21,7 @@
             <div class="col-12">
                 <div class="form-group pt-5">
                     <h2 class="p-subheader">Section Title :</h2>
-                    <h1 class="p-header">Visi Misi BPSTI</h1>
+                    <h1 class="p-header">{{$item->title}}</h1>
                 </div>
             </div>
         </div>
@@ -31,18 +31,16 @@
             <div class="col-lg-6 col-12">
                 <div class="form-group pt-5">
                     <h2 class="p-subheader">Visi :</h2>
-                    <p class="p-caption">Lorem, ipsum dolor sit amet consectetur adipisicing 
-                        elit. Aut excepturi suscipit ipsum eaque perferendis, dolorem quaerat. 
-                        Hic nihil dignissimos, magni modi ratione soluta, saepe, 
-                        atque optio distinctio tempore ex deserunt.
-                    </p>
+                    <div class="p-caption">
+                        {!!$item->vision!!}
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6 col-12">
                 <div class="form-group pt-5">
                     <h2 class="p-subheader">Cover :</h2>
                     <div class="hero-wrap">
-                        <div class="img-master" style="background: url('{{asset('/images/image1.jpeg')}}')">
+                        <div class="img-master" style="background: url('{{asset('/images/'.$item->vision_image)}}')">
 
                         </div>
                     </div>
@@ -55,18 +53,16 @@
             <div class="col-lg-6 col-12">
                 <div class="form-group pt-5">
                     <h2 class="p-subheader">Misi :</h2>
-                    <p class="p-caption">Lorem, ipsum dolor sit amet consectetur adipisicing 
-                        elit. Aut excepturi suscipit ipsum eaque perferendis, dolorem quaerat. 
-                        Hic nihil dignissimos, magni modi ratione soluta, saepe, 
-                        atque optio distinctio tempore ex deserunt.
-                    </p>
+                    <div class="p-caption">
+                        {!!$item->mission!!}
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6 col-12">
                 <div class="form-group pt-5">
                     <h2 class="p-subheader">Cover :</h2>
                     <div class="hero-wrap">
-                        <div class="img-master" style="background: url('{{asset('/images/image1.jpeg')}}')">
+                        <div class="img-master" style="background: url('{{asset('/images/'.$item->mission_image)}}')">
 
                         </div>
                     </div>
@@ -79,7 +75,7 @@
             <div class="col-12">
                 <div class="form-group pt-5">
                     <h2 class="p-subheader">Struktur Organisasi :</h2>
-                    <h1 class="p-header">Struktur Organisasi BPSTI</h1>
+                    <h1 class="p-header">{{$item->organization_structure_title}}</h1>
                 </div>
             </div>
         </div>
@@ -88,8 +84,8 @@
         <div class="row">
             <div class="col-lg-6 col-12 pt-5">
                     <h2 class="p-subheader">Cover :</h2>
-                    <div class="hero-wrap">
-                        <div class="img-master" style="background: url('{{asset('/images/image1.jpeg')}}')">
+                    <div class="team-wrap">
+                        <div class="img-master" style="background: url('{{asset('/images/'.$item->organization_structure_image)}}')">
 
                         </div>
                     </div>
@@ -97,7 +93,7 @@
             <div class="col-lg-6 col-12 pt-5">
                 <h2 class="p-subheader">Teams Banner :</h2>
                 <div class="team-wrap">
-                    <div class="img-master" style="background: url('{{asset('/images/image1.jpeg')}}')">
+                    <div class="img-master" style="background: url('{{asset('/images/'.$item->teams_banner)}}')">
 
                     </div>
                 </div>

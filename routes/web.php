@@ -22,9 +22,7 @@ use App\Http\Controllers\LandingPageController;
 
 route::get("/", [ViewController::class, "index"]);
 
-Route::get("/visi-misi", function () {
-    return view("main.pages.visionAndMission");
-});
+Route::get("/visi-misi" , [ViewController::class, "visiMisi"]);
 
 route::get("/struktur-organisasi", function () {
     return view("main.pages.organizationalStructure");

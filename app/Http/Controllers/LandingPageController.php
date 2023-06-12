@@ -7,6 +7,7 @@ use App\Models\footer_link;
 use App\Models\logs;
 use Auth;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class LandingPageController extends Controller
 {

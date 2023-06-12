@@ -15,6 +15,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     {{-- Local Style --}}
     <link rel="stylesheet" href="{{asset('/assets/style/admin/admin.css')}}">
+    {{-- CK Editor 5 --}}
+    <script src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
 </head>
 <body>
 @include('layouts/components/admin/navAdmin')
@@ -46,4 +48,10 @@
 <script>
   AOS.init();
 </script>
+ <script>
+        var allEditors = document.querySelectorAll('.ckeditor');
+        for (var i = 0; i < allEditors.length; ++i) {
+          ClassicEditor.create(allEditors[i]);
+        }
+    </script>
 </html>
