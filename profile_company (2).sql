@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2023 at 05:57 PM
+-- Generation Time: Jun 13, 2023 at 05:36 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.14
 
@@ -134,7 +134,8 @@ CREATE TABLE `faqs` (
 
 INSERT INTO `faqs` (`id`, `question`, `answer`, `status`, `created_at`, `updated_at`) VALUES
 (3, '<p>qweqwe</p>', '<p>asdasd</p>', 1, '2023-06-12 15:40:31', '2023-06-12 15:40:31'),
-(4, '<p>pertanyaan 2 edited</p>', '<p>jawaban 2 edited</p>', 0, '2023-06-12 15:46:53', '2023-06-12 15:56:56');
+(4, '<p>pertanyaan 2 edited</p>', '<p>jawaban 2 edited</p>', 1, '2023-06-12 15:46:53', '2023-06-13 14:54:20'),
+(5, '<p>pertanyaan 3</p><ol><li>sdfsdf</li><li>sdf</li><li>sdf</li><li>sdf</li></ol>', '<p>jawaban 3</p><ol><li>asdasd</li><li>asdasd</li><li>asd</li><li>asd</li></ol>', 1, '2023-06-13 15:18:03', '2023-06-13 15:18:03');
 
 -- --------------------------------------------------------
 
@@ -245,7 +246,25 @@ INSERT INTO `logs` (`id`, `user_id`, `activity`, `date`, `created_at`, `updated_
 (23, 1, 'Menghapus Pertanyaan : <p>pertanyaan 1</p> dari data FAQ', '2023-06-12 12:21:39', '2023-06-12 12:21:39', '2023-06-12 12:21:39'),
 (24, 1, 'Menambahkan Pertanyaan : <p>qweqwe</p> ke data FAQ', '2023-06-12 15:40:31', '2023-06-12 15:40:31', '2023-06-12 15:40:31'),
 (25, 1, 'Menambahkan Pertanyaan : <p>pertanyaan 2</p> ke data FAQ', '2023-06-12 15:46:53', '2023-06-12 15:46:53', '2023-06-12 15:46:53'),
-(26, 1, 'Melakukan Edit Pada Pertanyaan : <p>pertanyaan 2 edited</p> pada data FAQ', '2023-06-12 15:56:56', '2023-06-12 15:56:56', '2023-06-12 15:56:56');
+(26, 1, 'Melakukan Edit Pada Pertanyaan : <p>pertanyaan 2 edited</p> pada data FAQ', '2023-06-12 15:56:56', '2023-06-12 15:56:56', '2023-06-12 15:56:56'),
+(27, 1, 'Menambahkan Menu : menu 1 pada Master Data MENU', '2023-06-13 13:57:36', '2023-06-13 13:57:36', '2023-06-13 13:57:36'),
+(28, 1, 'Melakukan Edit pada menu : menu 1 pada Master Data MENU', '2023-06-13 14:33:34', '2023-06-13 14:33:34', '2023-06-13 14:33:34'),
+(29, 1, 'Menghapus menu : menu 1 edited dari Master data MENU', '2023-06-13 14:36:25', '2023-06-13 14:36:25', '2023-06-13 14:36:25'),
+(30, 1, 'Menambahkan Menu : dashboard pada Master Data MENU', '2023-06-13 14:37:02', '2023-06-13 14:37:02', '2023-06-13 14:37:02'),
+(31, 1, 'Menambahkan Menu : Landing Page Setting pada Master Data MENU', '2023-06-13 14:37:17', '2023-06-13 14:37:17', '2023-06-13 14:37:17'),
+(32, 1, 'Menambahkan Menu : Profile pada Master Data MENU', '2023-06-13 14:37:39', '2023-06-13 14:37:39', '2023-06-13 14:37:39'),
+(33, 1, 'Menambahkan Menu : Article pada Master Data MENU', '2023-06-13 14:37:49', '2023-06-13 14:37:49', '2023-06-13 14:37:49'),
+(34, 1, 'Menambahkan Menu : FAQ pada Master Data MENU', '2023-06-13 14:38:00', '2023-06-13 14:38:00', '2023-06-13 14:38:00'),
+(35, 1, 'Menambahkan Menu : contact pada Master Data MENU', '2023-06-13 14:38:09', '2023-06-13 14:38:09', '2023-06-13 14:38:09'),
+(36, 1, 'Menambahkan Menu : Document pada Master Data MENU', '2023-06-13 14:38:22', '2023-06-13 14:38:22', '2023-06-13 14:38:22'),
+(37, 1, 'Menambahkan Menu : SOP & Layanan pada Master Data MENU', '2023-06-13 14:38:43', '2023-06-13 14:38:43', '2023-06-13 14:38:43'),
+(38, 1, 'Menambahkan Menu : Jurnal Kerja pada Master Data MENU', '2023-06-13 14:39:04', '2023-06-13 14:39:04', '2023-06-13 14:39:04'),
+(39, 1, 'Menambahkan Menu : Master Kategori pada Master Data MENU', '2023-06-13 14:40:16', '2023-06-13 14:40:16', '2023-06-13 14:40:16'),
+(40, 1, 'Menambahkan Menu : Master Roles pada Master Data MENU', '2023-06-13 14:40:34', '2023-06-13 14:40:34', '2023-06-13 14:40:34'),
+(41, 1, 'Menambahkan Menu : Master Kategori Pekerjaan pada Master Data MENU', '2023-06-13 14:40:48', '2023-06-13 14:40:48', '2023-06-13 14:40:48'),
+(42, 1, 'Menambahkan Menu : Master Status Pekerjaan pada Master Data MENU', '2023-06-13 14:41:02', '2023-06-13 14:41:02', '2023-06-13 14:41:02'),
+(43, 1, 'Melakukan Edit Pada Pertanyaan : <p>pertanyaan 2 edited</p> pada data FAQ', '2023-06-13 14:54:20', '2023-06-13 14:54:20', '2023-06-13 14:54:20'),
+(44, 1, 'Menambahkan Pertanyaan : <p>pertanyaan 3</p><ol><li>sdfsdf</li><li>sdf</li><li>sdf</li><li>sdf</li></ol> ke data FAQ', '2023-06-13 15:18:03', '2023-06-13 15:18:03', '2023-06-13 15:18:03');
 
 -- --------------------------------------------------------
 
@@ -306,6 +325,25 @@ CREATE TABLE `master_menus` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `master_menus`
+--
+
+INSERT INTO `master_menus` (`id`, `name`, `slug`, `status`, `created_at`, `updated_at`) VALUES
+(2, 'dashboard', 'dashboard', 1, '2023-06-13 14:37:02', '2023-06-13 14:37:02'),
+(3, 'Landing Page Setting', 'landing-page-setting', 1, '2023-06-13 14:37:17', '2023-06-13 14:37:17'),
+(4, 'Profile', 'profile', 1, '2023-06-13 14:37:39', '2023-06-13 14:37:39'),
+(5, 'Article', 'article', 1, '2023-06-13 14:37:49', '2023-06-13 14:37:49'),
+(6, 'FAQ', 'faq', 1, '2023-06-13 14:38:00', '2023-06-13 14:38:00'),
+(7, 'contact', 'contact', 1, '2023-06-13 14:38:09', '2023-06-13 14:38:09'),
+(8, 'Document', 'document', 1, '2023-06-13 14:38:22', '2023-06-13 14:38:22'),
+(9, 'SOP & Layanan', 'sop-&-layanan', 1, '2023-06-13 14:38:43', '2023-06-13 14:38:43'),
+(10, 'Jurnal Kerja', 'jurnal-kerja', 1, '2023-06-13 14:39:04', '2023-06-13 14:39:04'),
+(11, 'Master Kategori', 'master-kategori', 1, '2023-06-13 14:40:16', '2023-06-13 14:40:16'),
+(12, 'Master Roles', 'master-roles', 1, '2023-06-13 14:40:34', '2023-06-13 14:40:34'),
+(13, 'Master Kategori Pekerjaan', 'master-kategori-pekerjaan', 1, '2023-06-13 14:40:48', '2023-06-13 14:40:48'),
+(14, 'Master Status Pekerjaan', 'master-status-pekerjaan', 1, '2023-06-13 14:41:02', '2023-06-13 14:41:02');
 
 -- --------------------------------------------------------
 
@@ -677,7 +715,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `faqs`
 --
 ALTER TABLE `faqs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `footer_links`
@@ -695,7 +733,7 @@ ALTER TABLE `landing_pages`
 -- AUTO_INCREMENT for table `logs`
 --
 ALTER TABLE `logs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `master_categories`
@@ -719,7 +757,7 @@ ALTER TABLE `master_jobs_statuses`
 -- AUTO_INCREMENT for table `master_menus`
 --
 ALTER TABLE `master_menus`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `master_roles`
