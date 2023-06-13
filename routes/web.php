@@ -40,9 +40,7 @@ route::get("document", function () {
     return view("main.pages.documents");
 });
 
-route::get("faq", function () {
-    return view("main.pages.faq");
-});
+route::get("frequently-asked-questions" , [ViewController::class , "faq"]);
 
 route::get("kontak", function () {
     return view("main.pages.aboutus");

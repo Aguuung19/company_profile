@@ -45,7 +45,7 @@
                     <a class="nav-link" href="{{url('/kontak')}}">Kontak</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('/faq')}}">FAQ</a>
+                    <a class="nav-link" href="{{url('/frequently-asked-questions')}}">FAQ</a>
                 </li>
                 
             </ul>
