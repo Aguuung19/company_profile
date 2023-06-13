@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FooterController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\MasterMenuController;
 use App\Http\Controllers\LandingPageController;
 
 /*
@@ -78,5 +79,9 @@ route::resource("profile", ProfileController::class)
     ->middleware("auth");
 
 route::resource("faq", FaqController::class)
+    ->except(['show'])
+    ->middleware("auth");
+
+route::resource("master_menu" , MasterMenuController::class)
     ->except(['show'])
     ->middleware("auth");

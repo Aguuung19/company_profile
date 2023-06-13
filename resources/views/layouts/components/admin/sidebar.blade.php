@@ -27,7 +27,7 @@
         <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-card-checklist"></i> <span>Jurnal Kerja</span></a>
         <a href="#master-collapse" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="master-collapse"><i class="bi bi-cpu-fill"></i> <span>Master Data</span><span class="me-auto bi bi-caret-down-fill float-end"></span> </a>
             <div class="collapse menu-profile" id="master-collapse">
-                <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-cpu"></i> <span>Master Data Menu</span></a>
+                <a href="{{url('master_menu')}}" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-cpu"></i> <span>Master Data Menu</span></a>
                 <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-cpu"></i> <span>Master Kategori</span></a>
                 <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-cpu"></i> <span>Master User Roles</span></a>
                 <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-cpu"></i> <span>Master Kategori Pekerjaan</span></a>

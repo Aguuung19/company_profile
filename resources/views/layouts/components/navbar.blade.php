@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top nb-main">
         <div class="container">
-            <a class="navbar-brand" href="{{url('/')}}">
+            <a class="navbar-brand" href="{{url('/')}}" aria-label="logo">
                 <div class="nb-wrap">
                     <div class="nb-img" style="background: url('{{asset('images/logo.webp')}}')">
 

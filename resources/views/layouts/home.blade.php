@@ -16,7 +16,7 @@
     {{-- Local Style --}}
     <link rel="stylesheet" href="{{asset('/assets/style/admin/admin.css')}}">
     {{-- CK Editor 5 --}}
-    <script src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
+    <script rel="pre-fetch" src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
 </head>
 <body>
 @include('layouts/components/admin/navAdmin')
