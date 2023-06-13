@@ -90,7 +90,13 @@ class FaqController extends Controller
      */
     public function edit(faq $faq)
     {
-        //
+        if (auth::user()->role_id == 1 || auth::user()->role_id == 2){
+            $data["item"] = faq::where('id' , $faq->id)->first();
+
+            return view('admin.faq.edit' , $data);
+        }else{
+            abort(403);
+        }
     }
 
     /**

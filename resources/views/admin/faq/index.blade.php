@@ -38,7 +38,7 @@
                                     <td>{!!$item->answer!!}</td>
                                     <td>{{$item->status}}</td>
                                     <td>
-                                        <a href="#" class="badge text-bg-primary" data-bs-toggle="offcanvas" data-bs-target="#offCanvasEdit" aria-controls="offCanvasEdit"><i class="bi bi-pencil-square"></i></a>
+                                        <a href="{{url('faq/'.$item->id.'/edit')}}" class="badge text-bg-primary"><i class="bi bi-pencil-square"></i></a>
                                     </td>
                                     <td>
                                         <form action="{{url('faq/'.$item->id)}}" method="POST">
@@ -66,18 +66,6 @@
             @include('admin.faq.add')
         </div>
     </div>
-
-    <div class="offcanvas offcanfas-lg offcanvas-bottom" tabindex="-1" id="offCanvasEdit" aria-labelledby="offCanvasEditLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title header" id="offcanvasRightLabel">Edit FAQ</h5>
-            <button type="submit" class="btn-close" data-bs-dismiss="offcanvas" aria-label="CLose"></button>
-        </div>
-        <div class="offcanvas-body">
-            @include('admin.faq.edit')
-        </div>
-    </div>
-
-
     
 
 @endsection
