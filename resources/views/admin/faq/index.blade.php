@@ -1,7 +1,7 @@
 @extends('layouts.home')
 
 @section('content')
-    <section class="faq-setting" data-aos="zoom-in" data-aos-delay="100">
+    <section class="tableListView-setting" data-aos="zoom-in" data-aos-delay="100">
         @if(session()->has('success'))
             <div class="alert alert-success" role="alert">
                 {{session('success')}}
@@ -10,8 +10,8 @@
         
         <div class="row">
             <div class="col-align-self-center">
-                <h1 class="f-header">Frequenly Asked Questions</h1>
-                <a href="#" class="btn btn-f-edit mt-3" data-bs-toggle="offcanvas" data-bs-target="#offCanvasAdd" aria-target="offCanvasAdd">
+                <h1 class="v-header">Frequenly Asked Questions</h1>
+                <a href="#" class="btn btn-v-edit mt-3" data-bs-toggle="offcanvas" data-bs-target="#offCanvasAdd" aria-target="offCanvasAdd">
                     <i class="bi bi-plus-circle"></i> Tambah
                 </a>
             </div>

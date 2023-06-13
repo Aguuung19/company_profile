@@ -288,28 +288,28 @@ body {
     }
 }
 
-.faq-setting {
+.tableListView-setting {
      @extend .box;
     margin-top: 30px;
     margin-bottom: 100px;
     padding: 15px 30px 30px 30px;
 
-    .f-header {
+    .v-header {
         @extend .header;
         color: $black !important;
         font-size: 1.5rem;
     }
-    .f-subheader {
+    .v-subheader {
         @extend .header;
         font-size: 1.3rem;
     }
 
-    .f-caption {
+    .v-caption {
         @extend .caption;
         font-size: 1rem;
     }
 
-    .btn-f-edit {
+    .btn-v-edit {
         @extend .btn-master;
         background: $primary;
         color: $white;

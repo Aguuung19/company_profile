@@ -6,7 +6,7 @@ body {
   position: relative;
 }
 
-.btn-master, .faq-setting .btn-f-edit, .profile-setting .btn-p-edit, .landing-page-setting .btn-hero, .landing-page-setting .btn-lp-edit, .btn-edit {
+.btn-master, .tableListView-setting .btn-v-edit, .profile-setting .btn-p-edit, .landing-page-setting .btn-hero, .landing-page-setting .btn-lp-edit, .btn-edit {
   padding: 15px 26px;
   border-radius: 10px;
   font-weight: 600;
@@ -19,7 +19,7 @@ body {
   align-self: center;
 }
 
-.header, .faq-setting .f-subheader, .faq-setting .f-header, .profile-setting .p-subheader, .profile-setting .p-header, .landing-page-setting .lp-subheader, .landing-page-setting .lp-header, .dashboard-home .dashboard-header, .subheader {
+.header, .tableListView-setting .v-subheader, .tableListView-setting .v-header, .profile-setting .p-subheader, .profile-setting .p-header, .landing-page-setting .lp-subheader, .landing-page-setting .lp-header, .dashboard-home .dashboard-header, .subheader {
   color: #005bc5;
   font-weight: 700;
 }
@@ -28,13 +28,13 @@ body {
   font-size: 1rem;
 }
 
-.caption, .faq-setting .f-caption, .profile-setting .p-caption, .landing-page-setting .lp-caption, .dashboard-home .dashboard-caption {
+.caption, .tableListView-setting .v-caption, .profile-setting .p-caption, .landing-page-setting .lp-caption, .dashboard-home .dashboard-caption {
   color: #252525;
   font-weight: 400;
   font-size: 1.3rem;
 }
 
-.box, .faq-setting, .profile-setting, .landing-page-setting, .dashboard-home {
+.box, .tableListView-setting, .profile-setting, .landing-page-setting, .dashboard-home {
   box-shadow: 0px 20px 36px 9px rgba(0, 91, 197, 0.2) !important;
   border-radius: 20px;
   width: 100%;
@@ -223,26 +223,26 @@ body {
   overflow: hidden;
 }
 
-.faq-setting {
+.tableListView-setting {
   margin-top: 30px;
   margin-bottom: 100px;
   padding: 15px 30px 30px 30px;
 }
-.faq-setting .f-header {
+.tableListView-setting .v-header {
   color: #252525 !important;
   font-size: 1.5rem;
 }
-.faq-setting .f-subheader {
+.tableListView-setting .v-subheader {
   font-size: 1.3rem;
 }
-.faq-setting .f-caption {
+.tableListView-setting .v-caption {
   font-size: 1rem;
 }
-.faq-setting .btn-f-edit {
+.tableListView-setting .btn-v-edit {
   background: #005bc5;
   color: #fff;
 }
-.faq-setting .badge {
+.tableListView-setting .badge {
   padding: 10px;
   font-size: 1.1rem;
 }

@@ -1,14 +1,14 @@
 @extends('layouts.home')
 
 @section('content')
-<section class="faq-setting" data-aos="zoom-in" data-aos-delay="100">
+<section class="tableListView-setting" data-aos="zoom-in" data-aos-delay="100">
     <form action="{{url('/faq/'.$item->id)}}" method="post">
         @method('put')
         @csrf
 
         <div class="row">
             <div class="col-align-self-center">
-                <h1 class="f-header">Edit FAQ</h1>
+                <h1 class="v-header">Edit FAQ</h1>
                
             </div>
         </div>
