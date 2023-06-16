@@ -17,7 +17,7 @@ class master_menu extends Model
         'status'
     ];
 
-    public function master_categories() {
-        return $this->hasMany(master_categories::class);
+    public function categories() {
+        return $this->hasMany(master_categories::class, 'menu_id' , 'id');
     }
 }

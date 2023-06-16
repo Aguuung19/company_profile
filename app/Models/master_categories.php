@@ -19,7 +19,7 @@ class master_categories extends Model
     ];
 
     public function master_menu() {
-        return $this->belonsTo(master_menu::class);
+        return $this->belongsTo(master_menu::class, 'menu_id' , 'id');
     }
 
     public function article() {
