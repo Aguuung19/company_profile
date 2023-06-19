@@ -29,7 +29,7 @@
             <div class="collapse menu-profile" id="master-collapse">
                 <a href="{{url('master_menu')}}" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-cpu"></i> <span>Master Data Menu</span></a>
                 <a href="{{url('master_category')}}" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-cpu"></i> <span>Master Kategori</span></a>
-                <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-cpu"></i> <span>Master User Roles</span></a>
+                <a href="{{url('master_roles')}}" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-cpu"></i> <span>Master User Roles</span></a>
                 <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-cpu"></i> <span>Master Kategori Pekerjaan</span></a>
                 <a href="#" class="list-group-item d-inline-block text-truncate" data-bs-parent="#sidebar"><i class="bi bi-cpu"></i> <span>Master Status Pekerjaan</span></a>
             </div>

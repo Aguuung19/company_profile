@@ -10,6 +10,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\MasterMenuController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\MasterRolesController;
 use App\Http\Controllers\MasterCategoryController;
 
 /*
@@ -86,5 +87,9 @@ route::resource("master_menu" , MasterMenuController::class)
     ->middleware("auth");
 
 route::resource("master_category" , MasterCategoryController::class)
+    ->except(['show'])
+    ->middleware("auth");
+
+route::resource("master_roles" , MasterRolesController::class)
     ->except(['show'])
     ->middleware("auth");
