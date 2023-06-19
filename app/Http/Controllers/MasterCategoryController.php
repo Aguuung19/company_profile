@@ -64,7 +64,7 @@ class MasterCategoryController extends Controller
                 logs::create([
                     'user_id' => $user,
                     'date' => $date,
-                    'activity' => "Menambahkan Category : ".$request->name." kedalam Menu : ".$request->menu_id." pada data Master CATEGORY",
+                    'activity' => "Menambahkan Kategori : ".$request->name." kedalam Menu : ".$request->menu_id." pada data MASTER CATEGORY",
                 ]);
             }
 
@@ -114,27 +114,25 @@ class MasterCategoryController extends Controller
     {
        if (auth::user()->role_id == 1) {
 
-        dd($master_category);
+         $validatedData = $request->validate([
+                'name' => 'required|unique:master_categories',
+                'slug' => 'required|unique:master_categories',
+                'menu_id' => 'required',
+                'status' => 'required',
+            ]);
 
-        //  $validatedData = $request->validate([
-        //         'name' => 'required|unique:master_categories',
-        //         'slug' => 'required|unique:master_categories',
-        //         'menu_id' => 'required',
-        //         'status' => 'required',
-        //     ]);
+            $update = master_categories::where('id' , $master_category->id)->update($validatedData);
 
-        //     $update = master_categories::where('id' , $master_categories->id)->update($validatedData);
+            if($update){
+                $user = Auth::user()->role_id;
+                $date = carbon::now();
 
-        //     if($update){
-        //         $user = Auth::user()->role_id;
-        //         $date = carbon::now();
-
-        //         logs::create([
-        //             'user_id' => $user,
-        //             'date' => $date,
-        //             'activity' => "Mengedit Category : ".$master_categories->name." dengan Menu : ".$request->menu_id." pada data Master CATEGORY",
-        //         ]);
-        //     }
+                logs::create([
+                    'user_id' => $user,
+                    'date' => $date,
+                    'activity' => "Mengedit Kategori : ".$master_category->name." dengan Menu : ".$master_category->menu_id." pada data MASTER CATEGORY",
+                ]);
+            }
        
         return redirect('/master_category')->with("success" , "Category Successfully UPDATED");
     } else {
@@ -148,8 +146,27 @@ class MasterCategoryController extends Controller
      * @param  \App\Models\master_categories  $master_categories
      * @return \Illuminate\Http\Response
      */
-    public function destroy(master_categories $master_categories)
+    public function destroy(master_categories $master_category)
     {
-        //
+        if (auth::user()->role_id == 1) {
+
+            $delete = master_categories::destroy($master_category->id);
+
+            if($delete){
+                $user = auth::user()->role_id;
+                $date = carbon::now();
+
+                logs::create([
+                    'user_id' => $user,
+                    'date' => $date,
+                    'activity' => "Menghapus Kategori : ".$master_category->name." dengan Menu : ".$master_category->menu_id." pada data MASTER CATEGORY",
+                ]);
+            }
+
+            return redirect('/master_category')->with("success" , "Category Successfully DELETED");
+
+        }else{
+            abort(403);
+        }
     }
 }
