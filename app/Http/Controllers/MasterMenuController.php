@@ -56,7 +56,7 @@ class MasterMenuController extends Controller
             $create = master_menu::create($validatedData);
 
             if($create){
-                $user = auth::user()->role_id;
+                $user = auth::user()->id;
                 $date = carbon::now();
 
                 logs::create([
@@ -121,7 +121,7 @@ class MasterMenuController extends Controller
             $create = master_menu::where('id' , $master_menu->id)->update($validatedData);
 
             if($create){
-                $user = auth::user()->role_id;
+               $user = auth::user()->id;
                 $date = carbon::now();
 
                 logs::create([
@@ -150,7 +150,7 @@ class MasterMenuController extends Controller
             $delete = master_menu::destroy($master_menu->id);
 
             if($delete){
-                $user = auth::user()->role_id;
+                $user = auth::user()->id;
                 $date = carbon::now();
 
                 logs::create([

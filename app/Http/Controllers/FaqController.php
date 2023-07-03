@@ -55,7 +55,7 @@ class FaqController extends Controller
             $create = faq::create($validatedData);
 
             if($create){
-                $user = auth::user()->role_id;
+                $user = auth::user()->id;
                 $date = carbon::now();
 
                 logs::create([
@@ -119,7 +119,7 @@ class FaqController extends Controller
             $update = faq::where("id" , $faq->id)->update($validatedData);
 
             if($update){
-                $user = Auth::user()->role_id;
+                $user = auth::user()->id;
                 $date = carbon::now();
 
                 logs::create([
@@ -148,7 +148,7 @@ class FaqController extends Controller
             $delete = faq::destroy($faq->id);
 
             if($delete){
-                $user = auth::user()->role_id;
+                $user = auth::user()->id;
                 $date = carbon::now();
 
                 logs::create([

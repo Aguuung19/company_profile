@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FooterController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\MasterJobsController;
 use App\Http\Controllers\MasterMenuController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\MasterRolesController;
@@ -91,5 +92,9 @@ route::resource("master_category" , MasterCategoryController::class)
     ->middleware("auth");
 
 route::resource("master_roles" , MasterRolesController::class)
+    ->except(['show'])
+    ->middleware("auth");
+
+route::resource("master_jobs" , MasterJobsController::class)
     ->except(['show'])
     ->middleware("auth");

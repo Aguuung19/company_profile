@@ -55,7 +55,7 @@ class MasterRolesController extends Controller
             $create = master_role::create($validateData);
 
             if($create){
-                $user = auth::user()->role_id;
+                $user = auth::user()->id;
                 $date = carbon::now();
 
                 logs::create([
@@ -90,8 +90,10 @@ class MasterRolesController extends Controller
      */
     public function edit(master_role $master_role)
     {
-          if(auth::user()->role_id == 1){
+        if(auth::user()->role_id == 1){
+            $data["item"] = $master_role;
 
+            return view('admin.Master-Role.edit', $data);
         }else{
             abort(403);
         }
@@ -106,7 +108,27 @@ class MasterRolesController extends Controller
      */
     public function update(Request $request, master_role $master_role)
     {
-          if(auth::user()->role_id == 1){
+        if(auth::user()->role_id == 1){
+            $validateData = $request->validate([
+                'role' => 'required|unique:master_roles',
+                'status' => 'required',
+            ]);
+
+            $update = master_role::where('id' , $master_role->id)->update($validateData);
+
+            if($update){
+                $user = auth::user()->id;
+                $date = carbon::now();
+
+                logs::create([
+                    'user_id' => $user,
+                    'date' => $date,
+                    'activity' => "Mengedit Role : ".$master_role->role." pada data MASTER ROLE",
+                ]);
+            }
+
+        return redirect('/master_roles')->with("success" , "ROLE Successfully UPDATED");
+
 
         }else{
             abort(403);
@@ -121,7 +143,22 @@ class MasterRolesController extends Controller
      */
     public function destroy(master_role $master_role)
     {
-          if(auth::user()->role_id == 1){
+        if(auth::user()->role_id == 1){
+
+            $destroy = master_role::destroy($master_role->id);
+
+            if($destroy){
+                $user = auth::user()->id;
+                $date =carbon::now();
+
+                logs::create([
+                    'user_id' => $user,
+                    'date' => $date,
+                    'activity' => 'Menghapus Data Role : '.$master_role->role.' dari data MASTER ROLE',
+                ]);
+            }
+        
+            return redirect('/master_roles')->with("success" , "Role Successfully DELETED");
 
         }else{
             abort(403);

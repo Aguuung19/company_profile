@@ -58,7 +58,7 @@ class MasterCategoryController extends Controller
             $create = master_categories::create($validatedData);
 
             if($create){
-                $user = Auth::user()->role_id;
+                $user = auth::user()->id;
                 $date = carbon::now();
 
                 logs::create([
@@ -124,7 +124,7 @@ class MasterCategoryController extends Controller
             $update = master_categories::where('id' , $master_category->id)->update($validatedData);
 
             if($update){
-                $user = Auth::user()->role_id;
+                $user = auth::user()->id;
                 $date = carbon::now();
 
                 logs::create([
@@ -153,7 +153,7 @@ class MasterCategoryController extends Controller
             $delete = master_categories::destroy($master_category->id);
 
             if($delete){
-                $user = auth::user()->role_id;
+                $user = auth::user()->id;
                 $date = carbon::now();
 
                 logs::create([
