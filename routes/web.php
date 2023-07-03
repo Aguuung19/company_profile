@@ -13,6 +13,7 @@ use App\Http\Controllers\MasterMenuController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\MasterRolesController;
 use App\Http\Controllers\MasterCategoryController;
+use App\Http\Controllers\MasterJobStatusController;
 
 /*
 |--------------------------------------------------------------------------
@@ -97,4 +98,8 @@ route::resource("master_roles" , MasterRolesController::class)
 
 route::resource("master_jobs" , MasterJobsController::class)
     ->except(['show'])
+    ->middleware("auth");
+
+route::resource("master_jobs_status" , MasterJobStatusController::class)
+    ->except(["show"])
     ->middleware("auth");
